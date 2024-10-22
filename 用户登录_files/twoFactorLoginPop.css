@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+.yz_maskDiv{width:100%;height:100%;background:rgba(0,0,0,0.6);position:fixed;left:0;top:0;z-index: 3}
+.yz_Pop{width:440px;background: #FFFFFF;border-radius: 7px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
+
+.popHead{line-height:60px;height:60px;background: #FFFFFF;box-shadow: inset 0 -1px 0 0 rgba(242,242,242,0.80);position:absolute;left:0;top:0;width:100%;padding:0 30px;box-sizing: border-box;background:#fff}
+.popClose{display:inline-block;width:18px;height:18px;margin-top:21px}
+.het62{width:100%;height:60px;}
+
+.pad30{padding:30px 30px 35px 30px;box-sizing:border-box;    background: #fff!important;    border-top:none!important;}
+.yz_p_gray{color: #8A8B99;margin-bottom:30px;}
+.yz_p_info{font-size:16px;color:#474C59;margin-bottom:20px;}
+.yz_p_info span{color:#3A8BFF;display:inline-block;padding:0 4px;}
+
+.pad30 .lg-item{width:380px;}
+
+.popBottom{width:100%;height:53px;background:#fff;position:absolute;left:0;bottom:0;padding-top:17px;}
+.popBottom a{margin-right:30px;}
+.shadowBox{box-shadow: 0 -1px 4px 0 rgba(209,209,209,0.18);}
+.het72{width:100%;height:72px;}
+
+.btns-box .err-tip{padding-left: 12px}
+
+.icon-eye {position: absolute;top: 0;right: 110px;}
+
+.lg-title {color: #181E33;font-size: 20px;margin-bottom: 10px;}

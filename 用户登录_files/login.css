@@ -1,0 +1,1168 @@
+@charset "UTF-8";
+/** created 2019.7.22  用于登录页面的样式*/
+html, body {
+    height: 100%;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+input {
+    -moz-appearance: button;
+    /* Firefox */
+    -webkit-appearance: button;
+    /* Safari 和 Chrome */
+    appearance: button;
+}
+
+.col-blue {
+    color: #3A8BFF;
+}
+
+.fs15 {
+    font-size: 15px;
+}
+
+.clearaft:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+::-webkit-input-placeholder {
+    color: #91a0b5 !important;
+    text-overflow: ellipsis;
+}
+
+:-moz-placeholder {
+    color: #91a0b5 !important;
+    text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+    color: #91a0b5 !important;
+    text-overflow: ellipsis;
+}
+
+:-ms-input-placeholder {
+    color: #91a0b5 !important;
+    text-overflow: ellipsis;
+}
+
+input:-moz-placeholder,
+input::-moz-placeholder {
+    opacity: 1;
+}
+
+/**返回*/
+.icon-back:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("/images/fanya/login/icon-back.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+    top: 2px;
+    margin-right: 6px;
+}
+
+/**密码锁*/
+.icon-pwd:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-password.png") no-repeat center;
+    background-size: cover;
+}
+
+/**闭眼*/
+.icon-eye-close:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-eye-close.png") no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/**睁眼*/
+.icon-eye-open:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-eye-open.png") no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/**手机*/
+.icon-tel:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-tel.png") no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+/**学校单位*/
+.icon-school:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-school.png") no-repeat center;
+    background-size: cover;
+}
+
+/**学号/工号*/
+.icon-card:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-card.png") no-repeat center;
+    background-size: cover;
+}
+
+/**验证码icon*/
+.icon-verify:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-verify.png") no-repeat center;
+    background-size: cover;
+}
+
+/**向右小箭头*/
+.icon-right:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    background: url("/images/fanya/login/icon-right.png") no-repeat center;
+    background-size: cover;
+    margin-left: 5px;
+}
+
+/**姓名icon*/
+.icon-person:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-person.png") no-repeat center;
+    background-size: cover;
+}
+
+/**登录模块公共样式------start*/
+.lg-container {
+    position: relative;
+    height: 100%;
+    background: #F2F4F7;
+    border-top: 1px solid #F2F4F7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.lg-container .main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*-webkit-transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));*/
+    /*-moz-transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));*/
+    /*-ms-transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));*/
+    /*-o-transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));*/
+    /*transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));*/
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    margin: 0 auto;
+}
+/*
+.lg-container .btn-big-blue {
+    width: 360px;
+    height: 48px;
+    background: url("/images/fanya/login/bg-btn-def.png") no-repeat center;
+    background-size: cover;
+    box-shadow: 0 3px 12px 0 rgba(39, 125, 255, 0.3);
+    border-radius: 24px;
+    font-size: 18px;
+    color: #ffffff;
+    outline: none;
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+.lg-container .btn-big-blue:hover {
+    background: url("/images/fanya/login/bg-btn-hover.png") no-repeat center;
+    background-size: cover;
+}
+
+.lg-container .btn-big-blue:active {
+    background: url("/images/fanya/login/bg-btn-active.png") no-repeat center;
+    background-size: cover;
+}*/
+.lg-container .btn-big-blue {
+    width: 360px;
+    height: 48px;
+    background: url("loginbtn.png") no-repeat 0 0;
+    background-size: cover;
+    box-shadow: 0 3px 12px 0 rgba(39, 125, 255, 0.3);
+    border-radius: 24px;
+    font-size: 18px;
+    color: #ffffff;
+    outline: none;
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+.lg-container .btn-big-blue:hover {
+    background-position:0 -48px;
+    background-size: cover;
+}
+
+.lg-container .btn-big-blue:active {
+     background-position:0 -96px;
+    background-size: cover;
+}
+
+.lg-container .btn-big-blue.disable {
+    background: url("/images/fanya/login/bg-btn-disable.png") no-repeat center;
+    background-size: cover;
+}
+
+.lg-container .lg-item {
+    width: 360px;
+    line-height: 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 24px;
+    font-size: 14px;
+    color: #181E33;
+    padding: 0;
+    position: relative;
+    /**  密码强中弱 标识*/
+}
+
+.lg-container .lg-item:before {
+    position: absolute;
+    top: 15px;
+    left: 24px;
+}
+
+.lg-container .lg-item input {
+    width: 100%;
+    height: 48px;
+    vertical-align: top;
+    background: #FFFFFF;
+    border: 1px solid #d4d6d9;
+    outline: none;
+    font-size: 14px;
+    color: #181E33;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    padding: 0 24px 0 54px;
+    box-sizing: border-box;
+}
+
+.lg-container .lg-item input:focus {
+    border: 1px solid #3A8BFF;
+    background: #ffffff;
+}
+
+.lg-container .lg-item .pd-right60 {
+    padding-right: 60px;
+}
+
+.lg-container .lg-item .pos-r24 {
+    position: absolute;
+    top: 0;
+    right: 24px;
+}
+
+.lg-container .lg-item .pwd-rule {
+    font-size: 12px;
+    color: #A8A8B3;
+    padding-left: 24px;
+    line-height: 1;
+    margin-top: 6px;
+    /*position: absolute;*/
+}
+
+.lg-container .lg-item .pwd-diff-list {
+    padding-left: 24px;
+    /*margin-top: 18px;*/
+    line-height: 1;
+}
+
+.lg-container .lg-item .pwd-diff-list > a {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    margin-right: 4px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #A8A8B3;
+}
+
+.lg-container .lg-item .pwd-diff-list > a i {
+    display: inline-block;
+    width: 40px;
+    height: 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    background: #E2E4EF;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff1 {
+    color: #181e33;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff1 > i {
+    background: linear-gradient(90deg, #64aaff, #6494ff);
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff2 {
+    color: #181e33;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff2 > i {
+    background: linear-gradient(90deg, #638fff, #6077ff);
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff3 {
+    color: #181e33;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff3 > i {
+    background: linear-gradient(90deg, #6073ff, #5d5bff);
+}
+
+.lg-container input:focus {
+    border: 1px solid #3A8BFF;
+    background: #ffffff;
+}
+
+.lg-container .item-tel {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.lg-container .item-tel .tel-area {
+    display: inline-block;
+    width: 100px;
+    height: 48px;
+    line-height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #D4D6D9;
+    border-radius: 24px;
+    padding-left: 24px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #646873;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.lg-container .item-tel .icon-down:after {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 100%;
+    background: url("/images/fanya/login/icon-down.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.lg-container .item-tel .icon-up:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.lg-container .item-tel .ipt-focus {
+    width: 248px;
+    height: 48px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    color: #181E33;
+    padding: 0 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.lg-container .item-tel .ipt-focus:focus {
+    border: 1px solid #3A8BFF;
+    background: #ffffff;
+}
+
+/*.lg-container .item-tel.error-tip {*/
+/*margin-bottom: 40px;*/
+/*}*/
+
+.lg-container .item-tel.error-tip .err-txt {
+    /*top: 48px;*/
+    left: 112px;
+}
+
+.lg-container .error-tip {
+    position: relative;
+}
+
+.lg-container .error-tip > input {
+    border: 1px solid #FF5152 !important;
+    background: #FFFFFF !important;
+}
+
+.lg-container .error-tip .err-txt {
+    font-size: 12px;
+    line-height: 1;
+    color: #FF5152;
+    padding: 6px 0 0 24px;
+    position: absolute;
+    /*top: 48px;*/
+    bottom: -18px;
+}
+
+/*.lg-container .error-tip .top66{*/
+/*top: 66px;*/
+/*}*/
+
+.lg-container .lg-top {
+    line-height: 20px;
+}
+
+.lg-container .lg-top .back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.lg-container .lg-top .service {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    color: #91A0B5;
+    outline: none;
+    z-index: 2;
+}
+
+.ipt-focus:focus {
+    border: 1px solid #3A8BFF !important;
+    background: #ffffff !important;
+}
+
+.lg-title {
+    color: #181E33;
+    font-size: 20px;
+    margin-bottom: 44px;
+}
+
+.col-lightblue {
+    color: #91A0B5;
+}
+
+.main-def-w {
+    width: 540px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgba(175, 187, 204, 0.2);
+    border-radius: 16px;
+    padding: 88px 90px 92px;
+}
+
+.filter-list {
+    display: none;
+    width: 324px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*padding: 7px 2px;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #f7f8fa;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: 0 2px 12px 0 #AFBBCC;
+    border-radius: 6px;
+}
+
+.filter-list .list-jg {
+    max-height: 290px;
+    overflow-y: auto;
+}
+
+.filter-list .list {
+    max-height: 252px;
+    overflow-y: auto;
+}
+
+.filter-list .dataSearch_bnt {
+    display: inline-block;
+    background: url("/images/fanya/login/icon-search.png") no-repeat center;
+    background-size: cover;
+    top: 9px;
+}
+
+.filter-list li {
+    text-align: left;
+    font-size: 14px;
+    color: #181E33;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 12px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.filter-list li:hover, .filter-list li:active, .filter-list li.current {
+    background: #F7FAFC;
+    color: #3A8BFF;
+}
+
+.filter-list li:hover span, .filter-list li:active span, .filter-list li.current span {
+    color: #3A8BFF;
+}
+
+.filter-list li .fl {
+    color: #181E33;
+}
+
+.filter-list li .fr {
+    color: #646873;
+}
+
+.filter-list .li-search {
+    padding: 9px 13px;
+}
+
+.filter-list .li-search .dataSearch {
+    width: 100%;
+}
+
+.filter-list .li-search .dataSearch .dataSearch_input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.filter-list .li-search:hover {
+    background: #ffffff;
+}
+
+/**美化滚动条*/
+.beat-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.beat-scroll::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.beat-scroll::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: #E6E6E6;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+/**获取验证码-input*/
+.item-getcode .ipt-code {
+    padding-right: 130px !important;
+}
+
+.item-getcode .col-gray {
+    color: #91A0B5;
+}
+
+.item-getcode .before-reget {
+    display: none;
+}
+
+/**随机生成验证码*/
+.item-code-random .ipt-code {
+    width: 248px;
+    height: 48px;
+    outline: none;
+    padding: 0 20px;
+    background: #FFFFFF;
+    border: 1px solid #e3e8f0;
+    border-radius: 24px;
+    font-size: 14px;
+    color: #181E33;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.item-code-random .code-img {
+    width: 95px;
+    height: 37px;
+    margin-top: 6px;
+    margin-right: 2px;
+}
+
+/**跳过*/
+.txt-skip {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.txt-skip a {
+    outline: none;
+    color: #3A8BFF;
+}
+
+.margin-top30 {
+    margin-top: 30px;
+}
+
+.margin-btm18 {
+    margin-bottom: 18px;
+}
+
+.margin-btm24 {
+    margin-bottom: 24px;
+}
+
+.margin-btm30 {
+    margin-bottom: 30px;
+}
+
+.margin-btm40 {
+    margin-bottom: 40px;
+}
+
+.w-ipt-100 {
+    width: 100%;
+}
+
+.w-ipt-80 {
+    width: 80%;
+}
+
+.pd-lr-24 {
+    padding: 0 24px;
+}
+
+.pd-btm100 {
+    padding-bottom: 100px;
+}
+
+/**登录模块公共样式------end*/
+/** 默认登录方式的样式-----start */
+.default-login {
+    width: 900px;
+    height: 546px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(175, 187, 204, 0.15);
+    background: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    position: relative;
+
+}
+
+.default-login-min {
+    width: 540px;
+}
+
+.default-login-min .default-login {
+    width: 540px;
+    /*height: 590px;*/
+}
+
+.default-login-min .lg-notice {
+    width: 540px;
+}
+
+.default-login .left {
+    width: 540px;
+    height: 100%;
+    padding: 68px 90px 51px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.default-login .left .line {
+    margin-top: 20px;
+    border-top: 1px dashed #F2F2F2;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.default-login .right {
+    height: 100%;
+    width: 360px;
+    padding: 155px 64px 0;
+    border-left: 1px dashed #F2F2F2;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.default-login .right .ecode-box {
+    border: 1px solid #F2F2F2;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.default-login .right .ecode-box img {
+    width: 180px;
+    height: 180px;
+}
+
+.default-login .right .tip {
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.default-login .item-pwd .ipt-pwd {
+    padding-right: 140px;
+}
+
+.default-login .item-pwd .icon-eye {
+    position: absolute;
+    top: 0;
+    right: 110px;
+}
+
+/** 默认登录方式的样式-----end */
+/**初始化密码----------start */
+.init-password {
+    padding-top: 68px;
+}
+
+/**初始化密码----------end */
+/**完善个人信息+初始化密码----------start */
+.init-perfect-msg {
+    min-height: 800px;
+    overflow: auto;
+}
+
+.init-perfect-msg .main {
+    width: auto;
+    padding: 68px 0 92px;
+}
+
+.init-perfect-msg .lg-title {
+    margin-bottom: 25px;
+}
+
+.init-perfect-msg .item {
+    padding: 0 90px;
+}
+
+.init-perfect-msg .item-line {
+    border-bottom: 1px dashed #F2F2F2;
+    padding-bottom: 36px;
+    margin-bottom: 28px;
+}
+
+.init-perfect-msg .btn-big-blue {
+    display: block;
+    margin: 40px auto 0;
+}
+
+.init-perfect-msg .btns-box {
+    width: 360px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+.init-perfect-msg .btns-box .btn-big-blue {
+    margin-top: 0;
+}
+
+/**完善个人信息+初始化密码----------end */
+
+.btns-box {
+    position: relative;
+}
+
+.btns-box .err-tip {
+    font-size: 12px;
+    color: #FF5152;
+    margin-top: 6px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 24px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #F7F8FA inset !important;
+}
+
+/*登录通知提示*/
+.lg-notice {
+    padding: 23px 30px;
+    background: #ffffff;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 0 20px 0 rgba(175, 187, 204, 0.15);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    margin-bottom: 76px;
+}
+
+.lg-notice .msg-title {
+    font-size: 20px;
+    color: #181E33;
+}
+
+.lg-notice p {
+    font-size: 13px;
+    color: #0C0015;
+    text-align: center;
+    line-height: 24px;
+}
+
+.default-login-main {
+    max-width: 900px;
+}
+
+.default-login-main .lg-notice {
+    width: 900px;
+}
+
+/*手机号登录和机构登录切换*/
+.login-tab-box .tab-head {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.login-tab-box .tab-list {
+    display: none;
+}
+
+.login-tab-box .tab-head .tab-t {
+    float: left;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    color: #C7C8D4;
+    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 12px;
+
+}
+
+.login-tab-box .tab-head .tab-t.current {
+    color: #181E33;
+    border-color: #3A8BFF;
+}
+
+.lg-container .lg-item .Seacher_jg input{
+	padding:0 14px;height:34px
+}
+/*logo*/
+.logo_img{width:360px;height:48px;margin-bottom:30px;}
+.logo_img img{max-width:360px}
+
+
+/**邮箱*/
+.icon-email:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/icon-email.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/**备案信息*/
+.filingBox {
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #E1E3E5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+    color:#8A8B99;
+    text-align: center;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+ .heightCalc {
+    top: calc(50% - 55px) !important
+}
+
+.filingBox span {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.filingBox span.icpSpan i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: url(/images/fanya/icon@2x.png) no-repeat;
+    background-size: 100%;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+
+
+/**2024.01.08  自动登录相关样式修改**/
+.changeIcon{
+    position:absolute;
+    width:70px;
+    height:70px;
+    top:20px;
+    left:20px;
+    z-index:10
+}
+.changeIcon span{
+    display:block;
+    height:70px;
+    cursor:pointer
+}
+.changeIcon span.pcIcon{background:url(/images/fanya/login/pcIcon.png) no-repeat;background-size:100%}
+.changeIcon span.ewmIcon{background:url(/images/fanya/login/ewmIcon.png) no-repeat;background-size:100%;display:none}
+.col-gray{
+    color:#6B89B3
+}
+.line-bord{
+    color:#E1E1E5;
+    margin:0 10px
+}
+.automatic{
+    display:flex;
+    align-items:center
+}
+.automatic span{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background:url(/images/fanya/login/checkbox.png) no-repeat;
+    background-size:100%;
+    margin-right:6px;
+    cursor:pointer;
+}
+.automatic span.checked{
+    background:url(/images/fanya/login/dx_checked.png) no-repeat;
+    background-size:100%;
+}
+.pd-lr-9{
+    padding:0 9.5px
+}
+.scan{
+    width:360px;
+    margin:0 auto;
+}
+.scanTit{
+    text-align:center;
+    font-size:20px;
+    font-weight:500;
+    line-height:28px;
+    margin-bottom:42px;
+}
+.scan .ecode-box{
+    width:180px;
+    height:180px;
+    padding:25px;
+    border:solid 1px #F2F2F2;
+    border-radius:12px;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+.scan .ecode-box img{
+    width:100%;
+    height:100%
+}
+.scan .clearaft{
+    width:230px;
+    margin:0 auto
+}
+.scan .ewmDisable{
+    text-align:center;
+}
+.scan-completed{
+    text-align:center
+}
+.userHead{
+    width:140px;
+    height:140px;
+    border-radius:100%;
+    overflow:hidden;
+    margin:70px auto 30px auto
+}
+.userHead img{
+    width:100%;
+    height:100%
+}
+.completed_font{
+    height:147px;
+    text-align:center
+}
+.scanFailed .automatic{
+    display:none
+}
+.scanFailed  .clearaft {text-align:center}
+.scanFailed  .clearaft .fr{float:none}
+.cancel{font-size:16px;line-height:22px;color:#6B89B3;cursor:pointer}
+.fs20{font-size:20px;line-height:28px;font-weight:500}
+.marTop8{margin-top:8px}
+.color13{color:#131B26}
+.color47{color:#474C59}
+.login-change .Agreement{position:absolute;bottom:30px;text-align:center;width:100%}
+
+/**2024.01.30  保留登录状态 相关样式修改**/
+.auto-lg-next .check-input {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: -2px;
+    vertical-align: middle;
+    margin-right: 6px;
+    background: url(/images/fanya/login/dxcheck.png) no-repeat;
+    background-size: 100%;
+}
+
+.auto-lg-next .checked-input{background:url(/images/fanya/login/dxchecked.png) no-repeat;background-size:100%;}
+.tips{position:relative;display: inline-block;}
+
+.tipsIc {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: -2px;
+    background: url(/images/fanya/login/tips.png) no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+.tipsIc:hover{background:url(/images/fanya/login/tips_hover.png) no-repeat;background-size:100%;}
+.tipsCon{
+    z-index: 999;
+    position:absolute;
+    left:-40px;
+    bottom: -66px;
+    min-width:200px;
+    padding:8px 15px;
+    line-height:20px;
+    background: rgba(24,30,51,0.80);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.1s 1s, visibility 0s 0.3s;
+    transition: opacity 0.1s 1s, visibility 0s 0.3s;
+    text-align:left;
+    color:#fff;
+    font-size:12px;
+}
+.tipsCon i{
+    display:block;
+    width:0px;
+    height:0px;
+    border:solid rgba(24,30,51,0.80) 4px;
+    position:absolute;
+    left:43px;
+    top: -8px;
+    border-color: transparent transparent rgba(24,30,51,0.80) transparent;
+}
+.tipsCon i.active{ display:block; width:0px; height:0px; border:solid rgba(24,30,51,0.80) 4px; position:absolute; left:50%; margin-left:-4px; bottom:40px; top:auto; border-color:transparent transparent rgba(24,30,51,0.80) transparent;}
+.tips:hover .tipsCon{ display:block; opacity:1; visibility:visible; -webkit-transition:opacity 0.3s 0.1s, visibility 0.3s 0.1s; transition:opacity 0.3s 0.1s, visibility 0.3s 0.1s;}
+.lg-opr-right a{padding:0 10px;display:inline-block;position:relative}
+
+.lg-opr-right a:last-child:after{
+    content:'';
+    position:absolute;
+    left:1px;
+    top: 4px;
+    width:1px;
+    height:14px;
+    background:#E1E1E5
+}
+
+.redBodybg {
+    background: url(/images/fanya/login/cxhuiyabg.png) no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+}
+
+.redBodybg .main {
+    top: 60%;
+}
+
+.redBodybg .btn-big-blue {
+    background: linear-gradient(90deg, #E14F53 0%, #C52C2C 100%);
+    box-shadow: 0 3px 12px 0 rgba(237, 82, 82, 0.5);
+}
+
+.blackboard-reg{
+    display: block;
+    text-align: center;
+}

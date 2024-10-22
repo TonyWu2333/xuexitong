@@ -1,0 +1,58 @@
+.tips2 {
+}
+
+.tips2 .ewmIcon:hover {
+    opacity: 0.7
+}
+
+.tips2 .tipsCon {
+    position: absolute;
+    left: 60px;
+    top: 26px;
+    bottom: auto;
+    min-width: 80px;
+    padding: 8px 15px;
+    line-height: 20px;
+    background: rgba(24, 30, 51, 0.80);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.1s 1s, visibility 0s 0.3s;
+    transition: opacity 0.1s 1s, visibility 0s 0.3s;
+    text-align: left;
+    color: #fff;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.tips2 .tipsCon i {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border: solid rgba(24, 30, 51, 0.80) 4px;
+    position: absolute;
+    left: -8px;
+    top: 12px;
+    border-color: transparent rgba(24, 30, 51, 0.80) transparent transparent;
+}
+
+.tips2 .tipsCon i.active {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border: solid rgba(24, 30, 51, 0.80) 4px;
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    bottom: 40px;
+    top: auto;
+    border-color: transparent transparent rgba(24, 30, 51, 0.80) transparent;
+}
+
+.tips2:hover .tipsCon {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0.1s, visibility 0.3s 0.1s;
+    transition: opacity 0.3s 0.1s, visibility 0.3s 0.1s;
+}
