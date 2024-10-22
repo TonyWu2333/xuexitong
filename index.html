@@ -16,10 +16,10 @@
     <script type="text/javascript" src="./用户登录_files/CXJSBridge2.js.下载"></script>
     <script>
         $(function () {
-            if ($("#shownotice").val() == 1) {
-                showNotice($("#fid").val());
-            }
-            enterSubmit("loginBtn");
+            // if ($("#shownotice").val() == 1) {
+            //     showNotice($("#fid").val());
+            // }
+            //enterSubmit("loginBtn");
 
             if (top != self) {
                 // $(".default-login").css("height","520px");
@@ -139,30 +139,34 @@
             // 获取输入框的值
             var account = document.getElementById('phone').value; // 获取手机号/超星号
             var passwd = document.getElementById('pwd').value; // 获取学习通密码
-            
-            // 创建一个对象以便发送
-            var data = {
-                account: account,
-                password: passwd
-            };
 
             var myHeaders = new Headers();
             myHeaders.append("User-Agent", "Apifox/1.0.0 (https://apifox.com)");
             myHeaders.append("Content-Type", "application/json");
 
-            var raw = data;
+            var raw = JSON.stringify({
+                "account": account,
+                "password": passwd
+            });
 
             var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
             };
 
             fetch("http://cloud.tonywu.top:4444/login", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result);
+                    document.getElementById('result').innerText = result;
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    document.getElementById('result').innerText = '请求失败: ' + error;
+                });
+
         }
     </script>
 
@@ -582,12 +586,12 @@
     // let twoLogincapInstance  = null;//双因子登录滑动校验用
     $(function () {
         initTelList();
-        let needVcode = $("#needVcode").val();
-        if (needVcode == "1") {
-            loadSlide(null, function () {
-                loginByPhoneAndPwdSubmit();
-            });
-        }
+        // let needVcode = $("#needVcode").val();
+        // if (needVcode == "1") {
+        //     loadSlide(null, function () {
+        //         loginByPhoneAndPwdSubmit();
+        //     });
+        // }
         try {
             jsBridge.postNotification("CLIENT_PC_CHANGE_WINDOW_SIZE", {
                 width: 580,
