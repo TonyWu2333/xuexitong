@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/1.5 微软雅黑, 黑体, Arial, Helvetica, sans-serif;
+    overflow-x: auto;
+    -webkit-tap-highlight-color: transparent;
+}
+
+table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table th {
+    font-weight: normal;
+}
+
+ul, ol, li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+input, select, textarea {
+    vertical-align: middle;
+    color: #000;
+    border: none;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+b, i, strong {
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {
+    border: 0;
+}
+
+.fr {
+    float: right
+}
+
+.fl {
+    float: left
+}
+
+.clear {
+    clear: both
+}
+
+.clearfix {
+    zoom: 1;
+    overflow: hidden
+}
+
+/*input-placeholder-color*/
+::-webkit-input-placeholder {
+    color: #E1E1E5;
+    text-overflow: ellipsis;
+}
+
+:-moz-placeholder {
+    color: #E1E1E5 !important;
+    text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+    color: #E1E1E5 !important;
+    text-overflow: ellipsis;
+}
+
+:-ms-input-placeholder {
+    color: #E1E1E5 !important;
+    text-overflow: ellipsis;
+}
+
+a,a:hover,a:active,a:visited,a:link,input:focus,span:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+    background: none;
+    text-decoration: none;
+}
+
+/*padding,margin值*/
+.pad30lr {
+    padding: 0 30px;
+}
+
+.padTop30 {
+    padding-top: 30px;
+}
+
+.marginRight30 {
+    margin-right: 30px;
+}
+.pad60 {
+    padding: 0 .6rem;
+}
+/**********公共文字颜色*************/
+.textHidden {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+/*color*/
+.colorDeep {
+    color: #181E33;
+}
+
+/*一级文字 深色*/
+.colorIn {
+    color: #646873;
+}
+
+/*二级文字 适中*/
+.colorShallow {
+    color: #A8A8B3;
+}
+
+/*三级文字 浅色*/
+.colorBlue_click {
+    color: #91a0b5;
+}
+
+/*可点击文字 蓝色*/
+.colorBlue {
+    color: #3A8BFF;
+}
+.fs14{font-size:.28rem;}
+
+/*搜索*/
+.dataSearch {
+    width: 4rem;
+    height: .72rem;
+    border-radius: .45rem;
+    position: relative
+}
+
+.dataSearch_input {
+    width: 170px;
+    height: .72rem;
+    font-size: .28rem;
+    color: #181E33;
+    border: 1px solid #E5E5E5;
+    background: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    padding: 0 .28rem;
+    border-radius: .45rem;
+}
+
+.dataSearch_bnt {
+    width: 18px;
+    height: 18px;
+    background: url(/images/fanya/search_ico.png) no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    position: absolute;
+    right: 17px;
+    top: 7px;
+    z-index: 3;
+    outline: none
+}
+
+.dataSearch_input:hover {
+    border: 1px solid #CCDEF3;
+}
+
+.dataSearch_input:focus {
+    outline: none;
+    border: 1px solid #CCDEF3;
+    box-shadow: 0 0 4px 0 #75BAFF;
+    border-radius: 40px;
+}
+
+
+
+.PlusIcon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+
+.arrowDown {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(/images/fanya/arrowDown.png) no-repeat;
+    margin-left: 5px;
+    float: left;
+    margin-top: 10px;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -moz-transition: -moz-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+}
+
+
+.changelang{
+    padding: 0 0.3rem;
+    margin-right: 0.3rem;
+    position:relative;
+    display: inline-block;
+}
+.changelang:after{
+    content:'';
+    position:absolute;
+    right:0;
+    top:50%;
+    width:1px;
+    height: .16rem;
+    background:#C9CDD4;
+    transform: translateY(-50%);
+}
+.changelang .changeicon{
+    display:inline-block;
+    width:.3rem;
+    height:.3rem;
+    vertical-align: middle;
+    margin: -.04rem .1rem 0 0;
+}
+.changelang .changeicon img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

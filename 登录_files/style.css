@@ -1,0 +1,511 @@
+@charset "utf-8";
+/* CSS Document */
+body,html{height:100%;}
+.lg-container{width:7.5rem;margin:0 auto;position:relative;height:100%;}
+.lg-top{height:.88rem;line-height:.88rem;text-align:right;padding:0 .3rem;font-size:.26rem;color:#91A0B5;}
+.icon-back:before {
+    content: '';
+    display: inline-block;
+    width: .24rem;
+    height: .24rem;
+    background: url(/images/fanya/login/icon-back.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    top: .04rem;
+    margin-right: .12rem;
+}
+
+.lg-container .lg-title{font-size:.56rem;color:#181E33;line-height:.78rem;padding:.98rem 0 .8rem 0;}
+
+.lg-container .lg-item {
+    width: 6.3rem;
+    line-height: .88rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: .45rem;
+    font-size: .28rem;
+    color: #181E33;
+    padding: 0;
+    position: relative;
+    /**  密码强中弱 标识*/
+}
+
+ .lg-item:before {
+    position: absolute;
+    top: .26rem;
+    left: .45rem;
+
+}
+
+.lg-container .lg-item input {
+    width: 100%;
+    height: .88rem;
+    vertical-align: top;
+    background: #FFFFFF;
+    border: 1px solid #E3E8F0;
+    outline: none;
+    font-size: .32rem;
+    color: #181E33;
+    -webkit-border-radius: .45rem;
+    border-radius: .45rem;
+    padding: 0 .5rem 0 1rem;
+    box-sizing: border-box;
+}
+
+.lg-container .lg-item input:focus {
+    border: 1px solid #3A8BFF;
+    background: #ffffff;
+}
+.icon-tel:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-tel.png) no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+
+}
+.lg-container .error-tip {
+    position: relative;
+}
+
+.icon-pwd:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-password.png) no-repeat center;
+    background-size: cover;
+}
+.icon-eye-close:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-eye-close.png) no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-eye-open:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-eye-open.png) no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+}
+ .item-pwd .icon-eye {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+}
+.lg-item .pos-r24 {
+    position: absolute;
+    top: 0;
+    right: .44rem;
+}
+
+.col-lightblue {
+    color: #91A0B5;
+}
+.lg-container .error-tip > input {
+    border: 1px solid #FF5152 !important;
+    background: #FFFFFF !important;
+}
+.lg-container .error-tip .err-txt {
+    font-size: .24rem;
+    line-height: 1;
+    color: #FF5152;
+    padding-top: .16rem;
+    position: absolute;
+    /* top: 48px; */
+    bottom: -18px;
+}
+.lg-container .btns-box {
+    position: relative;
+}
+.lg-container .btn-big-blue {
+    width: 6.3rem;
+    height: .88rem;
+    background: url(bg-btn-def.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 0 .03rem .24rem 0 rgba(39, 125, 255, 0.3);
+    border-radius: .45rem;
+    font-size: .32rem;
+    color: #ffffff;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+}
+.lg-container .btn-big-red {
+    background: linear-gradient(90deg, #E14F53 0%, #C52C2C 100%);
+    box-shadow: 0px 3px 12px 0px #ED525280;
+    width: 6.3rem;
+    height: .88rem;
+    background-size: cover;
+    border-radius: .45rem;
+    font-size: .32rem;
+    color: #ffffff;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+}
+.lg-container .btn-big-blue:active{
+     width: 6.3rem;
+    height: .88rem;background: url(/images/fanya/login/bg-btn-active.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 0 .03rem .24rem 0 rgba(39, 125, 255, 0.3);
+    border-radius: .45rem;
+    font-size: .32rem;
+    color: #ffffff;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+}
+.lg-container .bg-btn-disable{background: url(/images/fanya/login/bg-btn-disable.png) no-repeat center;}
+.lg-container .bg-btn-disable:active{background: url(/images/fanya/login/bg-btn-disable.png) no-repeat center;}
+
+.icon-school:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-school.png) no-repeat center;
+    background-size: cover;
+
+}
+.filter-list {
+    display: none;
+    width: 6.3rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* padding: 7px 2px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #f7f8fa;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: 0 .04rem .24rem 0 #AFBBCC;
+    border-radius: .12rem;
+}
+.filter-list .list-jg {
+    max-height: 6rem;
+    overflow-y: auto;
+}
+.filter-list li {
+    text-align: left;
+    font-size: .28rem;
+    color: #181E33;
+    line-height: .8rem;
+    height: .8rem;
+    padding: 0 .32rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+.filter-list .li-search {
+    padding: .16rem .26rem;
+}
+
+.filter-list .li-search .dataSearch {
+    width: 100%;
+}
+
+.filter-list .li-search .dataSearch .dataSearch_input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.filter-list .li-search:hover {
+    background: #ffffff;
+}
+
+.filter-list .list {
+    max-height: 5rem;
+    overflow-y: auto;
+}
+.filter-list .dataSearch_bnt {
+    display: inline-block;
+    background: url(/images/fanya/login/icon-search.png) no-repeat center;
+    background-size: cover;
+    top: .18rem;
+}
+
+
+
+.icon-card:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-card.png) no-repeat center;
+    background-size: cover;
+
+}
+.item-code-random .ipt-code {
+    width: 3.98rem;
+    height: .88rem;
+    outline: none;
+    padding: 0 .4rem;
+    background: #FFFFFF;
+    border: 1px solid #e3e8f0;
+    border-radius: .45rem;
+    font-size: .32rem;
+    color: #181E33;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.item-code-random .code-img {
+    width: 2.02rem;
+    height: .8rem;
+    margin-top: .04rem;
+    margin-right: .02rem;
+}
+.btns-box .err-tip {
+    font-size: .24rem;
+    color: #FF5152;
+    margin-top: .12rem;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.margin-btm60{margin-bottom:.6rem;}
+
+.clearaft:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col-blue {
+    color: #3A8BFF;
+}
+
+.bom-info{text-align:center;margin-top:2rem;width:100%;}
+.bom-info p{color:#91A0B5;font-size:.24rem;margin:.15rem 0}
+.bom-info p a{color:#3A8BFF;}
+
+
+/*手机验证码登录*/
+
+.lg-container .item-tel .tel-area {
+    display: inline-block;
+    width: 1.83rem;
+    height: .88rem;
+    line-height: .88rem;
+    background: #FFFFFF;
+    border: 1px solid #e3e8f0;
+    border-radius: .45rem;
+    /*padding-left: .44rem;*/
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: .32rem;
+    color: #646873;
+    margin-right: .2rem;
+    cursor: pointer;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.lg-container .item-tel .icon-down b{display:inline-block;margin-right: .1rem;}
+.lg-container .item-tel .icon-down i {
+    /*content: '';*/
+    display: inline-block;
+    width: .24rem;
+    height: 100%;
+    background: url(/images/fanya/login/icon-down.png) no-repeat center;
+    background-size: 100%;
+   /* position: absolute;
+    right: .4rem;
+    top: 0;*/
+}
+.lg-container .item-tel .icon-up i {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.lg-container .item-tel .ipt-focus {
+    width: 4.26rem;
+    height: .88rem;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    -webkit-border-radius:.45rem;
+    border-radius: .45rem;
+    font-size: .32rem;
+    color: #181E33;
+    padding: 0 .44rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.lg-container .item-tel.error-tip .err-txt {
+    /* top: 48px; */
+    left: 2rem;
+}
+.lg-container .error-tip .err-txt {
+    font-size: .24rem;
+    line-height: 1;
+    color: #FF5152;
+    padding-top: .12rem;
+    position: absolute;
+    /* top: 48px; */
+    bottom: -18px;
+}
+
+.icon-verify:before {
+    content: '';
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url(/images/fanya/login/icon-verify.png) no-repeat center;
+    background-size: cover;
+
+}
+.lg-container .lg-item .pos-r24 {
+    position: absolute;
+    top: 0;
+    right: .48rem;
+}
+
+.item-getcode .before-reget {
+    display: none;
+}
+.item-getcode .col-gray {
+    color: #91A0B5;
+}
+.lg-container .lg-item .pwd-rule {
+    font-size: .24rem;
+    color: #A8A8B3;
+    line-height: 1;
+    margin-top: .12rem;
+    /* position: absolute; */
+}
+/*公共*/
+.yzm-con{margin-top:.4rem;}
+.textcenter{text-align:center;}
+.yzm-con a{display:inline-block;}
+.margin-btm52{margin-bottom:.52rem;}
+
+/*3.26*/
+.skip:after {
+    content: '';
+    display: inline-block;
+    width: .24rem;
+    height: .24rem;
+    background: url(/images/fanya/login/icon-back.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    top: .04rem;
+    margin-left: .12rem;
+        -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+
+/**姓名icon*/
+.icon-person:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/images/fanya/login/icon-person.png") no-repeat center;
+    background-size: cover;
+}
+
+
+.lg-container .lg-item .pwd-diff-list {
+    line-height: 1;
+}
+
+.lg-container .lg-item .pwd-diff-list > a {
+    display: inline-block;
+    width: 1rem;
+    text-align: center;
+    margin-right: .1rem;
+    padding-top: .15rem;
+    font-size: .24rem;
+    color: #A8A8B3;
+}
+
+.lg-container .lg-item .pwd-diff-list > a i {
+    display: inline-block;
+    width: 1rem;
+    height: .12rem;
+    -webkit-border-radius: .08rem;
+    -moz-border-radius: .08rem;
+    border-radius: .08rem;
+    margin-bottom: .08rem;
+    background: #E2E4EF;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff1 {
+    color: #181e33;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff1 > i {
+    background: linear-gradient(90deg, #64aaff, #6494ff);
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff2 {
+    color: #181e33;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff2 > i {
+    background: linear-gradient(90deg, #638fff, #6077ff);
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff3 {
+    color: #181e33;
+}
+
+.lg-container .lg-item .pwd-diff-list > a.diff3 > i {
+    background: linear-gradient(90deg, #6073ff, #5d5bff);
+}
+.margin-btm40{margin-bottom:.4rem;}
+.change-Password{font-size:.24rem;color:#A8A8B3;margin-top:-.7rem;margin-bottom:.4rem;line-height:.4rem;}
+.border-bom{border-bottom:1px solid #F2F2F2;}
+.pad-bom50{padding-bottom:.6rem;}
+
+.lg-container .padtop50{padding-top:.5rem;}
+
+.mar-bom50{margin-bottom:.5rem;}
+
+.lg-container .item-border input:focus {
+    border: 1px solid #3A8BFF;
+    background: #ffffff;
+}
+
+.pad20{padding:0 .2rem;}

@@ -1,0 +1,100 @@
+.login-box {
+  /* width: 100%; */
+  height: 64px;
+  margin-bottom: 20px;
+  padding: 0 56.55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 18px;
+  color: #8A8B99;
+}
+.login-box div {
+  height: 64px;
+  position: relative;
+  line-height: 64px;
+  cursor: pointer;
+}
+.login-box .check {
+  font-weight: 600;
+  font-size: 18px;
+  color: #131B26;
+}
+.login-box .check::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  left: calc(50% - 24px/2 + 0.25px);
+  bottom: 0px;
+  background: #1E6FFA;
+  border-radius: 5px;
+}
+.QR-list {
+  display: none;
+  margin-top: 30px;
+}
+.QR-list .QR-code {
+  margin: 0 auto;
+  padding: 20px;
+  width: 240px;
+  height: 240px;
+  /*border: 0.5px solid #EBEBEB;*/
+  border-radius: 10px;
+}
+.QR-code img {
+  width: 100%;
+  height: 100%;
+}
+.QR-list .tips {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #474C59;
+}
+
+.QR-list .QR-code .right {
+  height: auto;
+  width: auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.QR-list .QR-code .right .ecode-box {
+  border: 1px solid #F2F2F2;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.QR-list .QR-code .right .ecode-box img {
+  width: 180px;
+  height: 180px;
+}
+
+.QR-list .QR-code .right .tip {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.QR-list .QR-code .item-pwd .ipt-pwd {
+  padding-right: 140px;
+}
+
+.QR-list .QR-code .item-pwd .icon-eye {
+  position: absolute;
+  top: 0;
+  right: 110px;
+}

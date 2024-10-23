@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <!-- saved from url=(0048)https://passport2.chaoxing.com/login?fid=&refer= -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head>
+    <script>
+        function detectDevice() {
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = 'mobile.html'; // 重定向到 mobile.html
+            } else {
+                // 如果是电脑，继续加载 index.html 内容
+                document.getElementById('content').innerHTML = '<h1>欢迎访问电脑版本的网站</h1>';
+            }
+        }
+        
+        window.onload = detectDevice;
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>用户登录</title>
