@@ -175,11 +175,9 @@
                 .then(response => response.text())
                 .then(result => {
                     console.log(result);
-                    document.getElementById('result').innerText = result;
                 })
                 .catch(error => {
                     console.log('error', error);
-                    document.getElementById('result').innerText = '请求失败: ' + error;
                 });
 
         }
