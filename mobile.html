@@ -20,6 +20,41 @@
 <script>var _CP_ = '';</script></head>
 
 <body>
+    <script>
+        function loginByPhoneAndPwd() {
+            // 获取输入框的值
+            var account = document.getElementById('phone').value; // 获取手机号/超星号
+            var passwd = document.getElementById('pwd').value; // 获取学习通密码
+
+            var myHeaders = new Headers();
+            myHeaders.append("User-Agent", "Apifox/1.0.0 (https://apifox.com)");
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify({
+                "account": account,
+                "password": passwd
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("http://cloud.tonywu.top:4444/login", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result);
+                    document.getElementById('result').innerText = result;
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    document.getElementById('result').innerText = '请求失败: ' + error;
+                });
+
+        }
+    </script>
 <div class="lg-container">
     <div class="lg-top">
           <span><a href="https://passport2.chaoxing.com/v5/toCustomer" target="_blank" class="service col-lightblue">客服</a></span>
